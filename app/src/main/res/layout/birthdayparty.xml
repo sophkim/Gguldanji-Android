@@ -7,6 +7,28 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/missingCom_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/missingCom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="디자인 완성"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:elevation="10dp"
         android:layout_width="316dp"
@@ -257,5 +279,34 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
+
+        <Button
+            android:id="@+id/hbdCom_save"
+            android:layout_width="272dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/yellow_btn"
+            android:text="저장"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/hbdCom_share"
+            android:layout_width="37dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/share_btn"
+            android:drawableLeft="@drawable/share_btn"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/weddingCom_save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

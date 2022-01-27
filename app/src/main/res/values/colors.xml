@@ -13,5 +13,5 @@
     <color name="add_img">#F0F0F0</color>
     <color name="input_text">#CCCCCC</color>
     <color name="share_btn">#454040</color>
-    <color name="missing_post">#FCD462</color>
+    <color name="red">#ED4141</color>
 </resources>
