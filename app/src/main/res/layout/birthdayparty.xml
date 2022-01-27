@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:elevation="10dp"
+        android:layout_width="316dp"
+        android:layout_height="473dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="98dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/hbd_tx1"
+                android:layout_width="113dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_txt1" />
+
+            <ImageView
+                android:id="@+id/hdb_sunflower"
+                android:layout_width="90dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/hbd_tx1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_sunflower" />
+
+            <ImageView
+                android:id="@+id/hdb_sunflower2"
+                android:layout_width="90dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hbd_tx1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_sunflower" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="164dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toStartOf="@+id/userProfile2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hdb_sunflower"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/hdb_under"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbd_tx1"
+                app:srcCompat="@drawable/hbd_heart_head" />
+
+            <ImageView
+                android:id="@+id/hdb_under2"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/hbd_heart_head" />
+
+            <ImageView
+                android:id="@+id/hbd_tx2"
+                android:layout_width="17dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="172dp"
+                android:layout_marginEnd="104dp"
+                app:layout_constraintBottom_toBottomOf="@+id/hbd_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hbd_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/hbd_txt2" />
+
+            <ImageView
+                android:id="@+id/hdb_tx3"
+                android:layout_width="228dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_txt3" />
+
+            <ImageView
+                android:id="@+id/hdb_tx4"
+                android:layout_width="150dp"
+                android:layout_height="46dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hdb_tx3"
+                app:srcCompat="@drawable/hbd_txt4" />
+
+            <EditText
+                android:id="@+id/hbd_name"
+                android:layout_width="49dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="164dp"
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:hint="박지니"
+                android:inputType="textPersonName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toStartOf="@+id/hbd_tx2"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TableLayout
+                android:layout_width="262dp"
+                android:layout_height="147dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.586"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hdb_tx4">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="67dp"
+                        android:layout_height="34dp"
+                        app:srcCompat="@drawable/hbd_date" />
+
+                    <EditText
+                        android:id="@+id/hdb_date"
+                        android:layout_width="127dp"
+                        android:layout_height="38dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="2022년 03월 09일"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="67dp"
+                        android:layout_height="34dp"
+                        app:srcCompat="@drawable/hbd_address" />
+
+                    <EditText
+                        android:id="@+id/hdb_address"
+                        android:layout_width="210dp"
+                        android:layout_height="38dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="지니네집"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="67dp"
+                        android:layout_height="34dp"
+                        app:srcCompat="@drawable/hbd_" />
+
+                    <EditText
+                        android:id="@+id/hdb_mat"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="맛있는 간식, 성이 있는 편지"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="67dp"
+                        android:layout_height="34dp"
+                        app:srcCompat="@drawable/hbd_ps" />
+
+                    <EditText
+                        android:id="@+id/hdb_ps"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="늦는 사람 똥침 100대"
+                        android:inputType="textPersonName"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
