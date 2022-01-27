@@ -63,6 +63,31 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/hbd_sunflower" />
 
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="164dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toStartOf="@+id/userProfile2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hdb_sunflower"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/hdb_under"
                 android:layout_width="290dp"
