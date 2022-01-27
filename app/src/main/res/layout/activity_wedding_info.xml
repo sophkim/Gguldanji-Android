@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeddingInfoActivity">
+
+    <ImageButton
+        android:id="@+id/weddingInfo_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/weddingInfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="정보 입력"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weddingInfo_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="287dp"
+        android:layout_marginBottom="539dp"
+        android:text="대표 사진"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/weddingInfo_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weddingInfo_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="275dp"
+        android:layout_marginBottom="359dp"
+        android:text="신부님 성함"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/weddingInfo_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weddingInfo_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="275dp"
+        android:text="신랑님 성함"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_femaleEdit" />
+
+    <TextView
+        android:id="@+id/weddingInfo_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="275dp"
+        android:text="예식 날짜"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_maleEdit" />
+
+    <TextView
+        android:id="@+id/weddingInfo_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="275dp"
+        android:text="예식 장소"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_dateEdit" />
+
+    <Button
+        android:id="@+id/weddingInfo_btn"
+        android:layout_width="316dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@color/yellow_btn"
+        android:text="완료"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/weddingInfo_imgEdit"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="420dp"
+        android:background="@color/add_img"
+        app:layout_constraintBottom_toTopOf="@+id/weddingInfo_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_img" />
+
+    <EditText
+        android:id="@+id/weddingInfo_femaleEdit"
+        android:layout_width="316dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_female" />
+
+    <EditText
+        android:id="@+id/weddingInfo_maleEdit"
+        android:layout_width="316dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_male" />
+
+    <EditText
+        android:id="@+id/weddingInfo_dateEdit"
+        android:layout_width="316dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_date" />
+
+    <EditText
+        android:id="@+id/weddingInfo_placeEdit"
+        android:layout_width="316dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="@color/input_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weddingInfo_place" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

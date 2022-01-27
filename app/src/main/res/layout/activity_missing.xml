@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MissingActivity">
+
+    <ImageButton
+        android:id="@+id/missing_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/missing_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="실종 전단지"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/missing_img"
+        android:layout_width="316dp"
+        android:layout_height="473dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missing_title"
+        app:srcCompat="@drawable/missingmerry_complete" />
+
+    <Button
+        android:id="@+id/missing_btn"
+        android:layout_width="316dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@color/yellow_btn"
+        android:text="템플릿 정보 입력"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missing_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>
