@@ -28,7 +28,7 @@ class MissingInfoActivity : AppCompatActivity() {
         imageView = findViewById(R.id.imageView)
         completeButton = findViewById(R.id.missingInfo_btn)
 
-        imageButton.setOnClickListener{loadImage()}
+        imageButton.setOnClickListener{loadImage()}  //이미지를 가져오는 함수 호출
 
         completeButton.setOnClickListener{
 
@@ -42,8 +42,8 @@ class MissingInfoActivity : AppCompatActivity() {
                 val resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true)
                 resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
                 val byteArray: ByteArray = stream.toByteArray()
-                //
 
+                //인텐트
                 var intent = Intent(this, MissingCompleteActivity::class.java)
                 intent.putExtra("image", byteArray)
                 startActivity(intent)
@@ -55,6 +55,7 @@ class MissingInfoActivity : AppCompatActivity() {
         }
     }
 
+    //불러온 이미지를 imageView에 보여줌
     @Override
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -62,28 +63,19 @@ class MissingInfoActivity : AppCompatActivity() {
         if(requestCode == Gallery){
             if(resultCode == RESULT_OK){
                 imageButton.setBackgroundColor(Color.parseColor("#00B3B3B3"))
-                //button.setVisibility(View.INVISIBLE)
 
                 var dataUri = data?.data
                 try{
                     var bitmap : Bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver,dataUri)
                     imageView.setImageBitmap(bitmap)
-
-
-
                 }catch (e:Exception){
                     Toast.makeText(this,"$e",Toast.LENGTH_SHORT).show()
                 }
             }
-            /*
-            else{
-                Toast.makeText(this,"something wrong",Toast.LENGTH_SHORT).show()
-            }
-             */
         }
     }
 
-    private fun loadImage(){
+    private fun loadImage(){  //앨범에서 이미지를 불러오는 함수
 
         val intent = Intent()
         intent.type = "image/*"
