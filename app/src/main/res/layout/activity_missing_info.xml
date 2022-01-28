@@ -164,6 +164,20 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/add_img" />
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_marginStart="122dp"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginBottom="420dp"
+                    app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
                 <EditText
                     android:id="@+id/missingInfo_nameEdit"
                     android:layout_width="316dp"
@@ -254,6 +268,7 @@
                         android:scaleY="0.8"
                         android:text="남" />
                 </RadioGroup>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

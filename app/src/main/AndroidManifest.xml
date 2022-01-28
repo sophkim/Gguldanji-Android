@@ -16,7 +16,11 @@
         <activity android:name=".MissingCompleteActivity"></activity>
 
         <activity android:name=".MissingInfoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".MissingActivity" >
@@ -24,11 +28,7 @@
         </activity>
 
         <activity android:name=".HbdInfoActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".HbdActivity" >
