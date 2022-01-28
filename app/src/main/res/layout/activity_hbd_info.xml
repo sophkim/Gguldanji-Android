@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/hbdInfo_dateEdit" />
 
     <TextView
-        android:id="@+id/hbdInfo_preparation"
+        android:id="@+id/hbdInfo_prep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_preparationEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_prepEdit" />
 
     <Button
         android:id="@+id/hbdInfo_btn"
@@ -123,7 +123,11 @@
         android:layout_marginBottom="22dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/yellow_btn"
+        android:elevation="5dp"
+        android:fontFamily="@font/notosans_bold"
+        android:stateListAnimator="@null"
         android:text="완료"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -192,7 +196,7 @@
         app:layout_constraintTop_toBottomOf="@+id/hbdInfo_place" />
 
     <EditText
-        android:id="@+id/hbdInfo_preparationEdit"
+        android:id="@+id/hbdInfo_prepEdit"
         android:layout_width="316dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -205,7 +209,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_preparation" />
+        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_prep" />
 
     <EditText
         android:id="@+id/hbdInfo_sayEdit"

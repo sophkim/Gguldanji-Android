@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/hbdCom_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_btn" />
+
+    <TextView
+        android:id="@+id/hbdCom__title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:text="디자인 완성"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:elevation="10dp"
+        android:layout_width="316dp"
+        android:layout_height="473dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="98dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/hbdCom_tx5"
+                android:layout_width="67dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx4"
+                app:srcCompat="@drawable/hbd_date" />
+
+            <TextView
+                android:id="@+id/hbdCom_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="129dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/childrenheart"
+                android:text="박지니"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/hdbCom_tx3"
+                app:layout_constraintEnd_toStartOf="@+id/hbdCom_tx2"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hdbCom_under"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx"
+                android:layout_width="113dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_txt1" />
+
+            <ImageView
+                android:id="@+id/hbdCom_sun"
+                android:layout_width="90dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/hbdCom_tx"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_sunflower" />
+
+            <ImageView
+                android:id="@+id/hbdCom_sun2"
+                android:layout_width="90dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_tx"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_sunflower" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/hbdCom_img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="164dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toStartOf="@+id/hbdCom_img2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/hbdCom_img2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/hbd_main"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_sun"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/hdbCom_under"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx"
+                app:srcCompat="@drawable/hbd_heart_head" />
+
+            <ImageView
+                android:id="@+id/hdbCom_under2"
+                android:layout_width="290dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/hbd_heart_head" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx2"
+                android:layout_width="17dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="172dp"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_txt2" />
+
+            <ImageView
+                android:id="@+id/hdbCom_tx3"
+                android:layout_width="228dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hbd_txt3" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx4"
+                android:layout_width="150dp"
+                android:layout_height="46dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hdbCom_tx3"
+                app:srcCompat="@drawable/hbd_txt4" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx6"
+                android:layout_width="65dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx5"
+                app:srcCompat="@drawable/hbd_address" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx7"
+                android:layout_width="66dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx6"
+                app:srcCompat="@drawable/hbd_" />
+
+            <ImageView
+                android:id="@+id/hbdCom_tx8"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/hdbCom_under2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx7"
+                app:srcCompat="@drawable/hbd_ps" />
+
+            <TextView
+                android:id="@+id/hbdCom_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="100dp"
+                android:fontFamily="@font/childrenheart"
+                android:text="2022년 03월 09일"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_tx5"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_tx4" />
+
+            <TextView
+                android:id="@+id/hbdCom_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="127dp"
+                android:fontFamily="@font/childrenheart"
+                android:text="지니네 집"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_tx5"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_date" />
+
+            <TextView
+                android:id="@+id/hbdCom_prep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="71dp"
+                android:fontFamily="@font/childrenheart"
+                android:text="맛있는 간식, 성의있는 편지"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_tx5"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_place" />
+
+            <TextView
+                android:id="@+id/hbdCom_ps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/childrenheart"
+                android:text="늦는사람 똥침 100대"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/hdbCom_under2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/hbdCom_tx8"
+                app:layout_constraintTop_toBottomOf="@+id/hbdCom_prep" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/hbdCom_save"
+        android:elevation="5dp"
+        android:stateListAnimator="@null"
+        android:layout_width="272dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@color/yellow_btn"
+        android:text="저장"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hbdCom_share"
+        android:elevation="5dp"
+        android:stateListAnimator="@null"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@color/share_btn"
+        android:drawableLeft="@drawable/share_btn"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weddingCom_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     android:orientation="vertical"
     tools:context=".HbdActivity">
+
+    <FrameLayout
+        android:elevation="10dp"
+        android:layout_width="316dp"
+        android:layout_height="473dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="98dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455">
+
+
+        <ImageView
+            android:id="@+id/hbd_img"
+            android:layout_width="316dp"
+            android:layout_height="473dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="98dp"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/group15" />
+    </FrameLayout>
 
     <ImageButton
         android:id="@+id/hbd_back"
@@ -24,24 +59,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="생일 초대장"
+        android:textColor="@color/red"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/hbd_img"
-        android:layout_width="316dp"
-        android:layout_height="473dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="98dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbd_title"
-        app:srcCompat="@drawable/group15" />
 
     <Button
         android:id="@+id/hbd_btn"
@@ -53,7 +75,11 @@
         android:layout_marginBottom="22dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/yellow_btn"
+        android:elevation="5dp"
+        android:fontFamily="@font/notosans_bold"
+        android:stateListAnimator="@null"
         android:text="템플릿 정보 입력"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

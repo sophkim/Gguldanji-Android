@@ -35,7 +35,7 @@
             app:srcCompat="@drawable/honey" />
 
         <TextView
-            android:id="@+id/main_txt1"
+            android:id="@+id/main_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="41dp"
@@ -44,7 +44,7 @@
             android:text="꿀단지"
             android:textAlignment="center"
             android:textSize="26sp"
-            app:layout_constraintBottom_toTopOf="@+id/main_text2"
+            app:layout_constraintBottom_toTopOf="@+id/main_tx2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
             app:layout_constraintVertical_bias="0.046" />
 
         <TextView
-            android:id="@+id/main_text2"
+            android:id="@+id/main_tx2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -62,10 +62,10 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_txt1" />
+            app:layout_constraintTop_toBottomOf="@+id/main_tx" />
 
         <Button
-            android:id="@+id/main_btn1"
+            android:id="@+id/main_btn"
             android:layout_width="103dp"
             android:layout_height="103dp"
             android:layout_marginStart="71dp"
@@ -73,19 +73,23 @@
             android:layout_marginEnd="186dp"
             android:layout_marginBottom="192dp"
             android:background="@drawable/button_bg"
-            android:drawablePadding="-10dp"
+            android:drawablePadding="0dp"
+            android:elevation="5dp"
             android:fontFamily="@font/notosans_regular"
             android:paddingTop="15dp"
+            android:stateListAnimator="@null"
             android:text="청첩장"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_text2"
+            app:layout_constraintTop_toBottomOf="@+id/main_tx2"
             tools:drawableTop="@drawable/wedding_btn" />
 
         <Button
             android:id="@+id/main_btn3"
+            android:elevation="5dp"
+            android:stateListAnimator="@null"
             android:layout_width="219dp"
             android:layout_height="103dp"
             android:layout_marginTop="13dp"
@@ -99,11 +103,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_btn1"
+            app:layout_constraintTop_toBottomOf="@+id/main_btn"
             tools:drawableTop="@drawable/missing_btn" />
 
         <Button
             android:id="@+id/main_btn2"
+            android:elevation="5dp"
+            android:stateListAnimator="@null"
             android:layout_width="103dp"
             android:layout_height="103dp"
             android:layout_marginStart="187dp"
@@ -119,7 +125,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_text2"
+            app:layout_constraintTop_toBottomOf="@+id/main_tx2"
             tools:drawableTop="@drawable/hbd_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

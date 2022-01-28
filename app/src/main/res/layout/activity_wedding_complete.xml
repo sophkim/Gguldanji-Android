@@ -62,13 +62,13 @@
                 android:fontFamily="@font/childrenheart"
                 android:text="7/14"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView2"
+                app:layout_constraintBottom_toTopOf="@+id/weddingCom_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/weddingCom_rect" />
 
             <TextView
-                android:id="@+id/weddingCom_bigDate2"
+                android:id="@+id/weddingCom_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="94dp"
@@ -80,10 +80,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/weddingCom_img" />
 
             <TextView
-                android:id="@+id/weddingCom_bigDate3"
+                android:id="@+id/weddingCom_name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -94,11 +94,11 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintStart_toEndOf="@+id/weddingCom_leaf"
+                app:layout_constraintTop_toBottomOf="@+id/weddingCom_img" />
 
             <TextView
-                android:id="@+id/weddingCom_bigDate4"
+                android:id="@+id/weddingCom_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="110dp"
@@ -110,10 +110,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                app:layout_constraintTop_toBottomOf="@+id/weddingCom_leaf" />
 
             <TextView
-                android:id="@+id/weddingCom_bigDate5"
+                android:id="@+id/weddingCom_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="113dp"
@@ -125,10 +125,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weddingCom_bigDate4" />
+                app:layout_constraintTop_toBottomOf="@+id/weddingCom_date" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/weddingCom_img"
                 android:layout_width="294dp"
                 android:layout_height="312dp"
                 android:layout_marginStart="11dp"
@@ -140,7 +140,7 @@
                 app:srcCompat="@drawable/merry_main" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/weddingCom_leaf"
                 android:layout_width="43dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="136dp"
@@ -148,7 +148,7 @@
                 android:layout_marginEnd="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/weddingCom_img"
                 app:srcCompat="@drawable/merry_leaf" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -164,13 +164,19 @@
         android:layout_marginBottom="22dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/yellow_btn"
+        android:elevation="5dp"
+        android:fontFamily="@font/notosans_bold"
+        android:stateListAnimator="@null"
         android:text="저장"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/weddingCom_share"
+        android:elevation="5dp"
+        android:stateListAnimator="@null"
         android:layout_width="37dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"

@@ -51,6 +51,7 @@
             android:background="@color/yellow_btn">
 
             <FrameLayout
+                android:id="@+id/frameLayout2"
                 android:layout_width="266dp"
                 android:layout_height="341dp"
                 android:layout_marginStart="25dp"
@@ -60,11 +61,44 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.68"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
+                app:layout_constraintTop_toBottomOf="@+id/missingCom_tx2">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/missingCom_tx3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="생김새나 성격 등 특징 적는 란"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+                    <TextView
+                        android:id="@+id/missingCom_say"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="찾아주시는 분께는 사례 드리겠습니다."
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/missingCom_phone" />
+
+                    <TextView
+                        android:id="@+id/missingCom_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="010-1234-5678"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/missingCom_tx3" />
 
                     <FrameLayout
                         android:id="@+id/frameLayout"
@@ -73,10 +107,65 @@
                         android:background="@color/red"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
+                        app:layout_constraintTop_toBottomOf="@+id/missingCom_img">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/missingCom_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="42dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginEnd="42dp"
+                                android:text="진돗개 / 4세 / 남자 / 바둑이"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/missingCom_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="103dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="103dp"
+                                android:layout_marginBottom="4dp"
+                                android:text="1월 20일"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toTopOf="@+id/missingCom_place"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/missingCom_info" />
+
+                            <TextView
+                                android:id="@+id/missingCom_place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="56dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="56dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="꿈두레 도서관에서 실종"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/missingCom_date" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/missingCom_img"
                         android:layout_width="214dp"
                         android:layout_height="128dp"
                         android:layout_marginStart="26dp"
@@ -92,38 +181,42 @@
             </FrameLayout>
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/missingCom_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="67dp"
                 android:layout_marginTop="19dp"
                 android:layout_marginEnd="67dp"
+                android:fontFamily="@font/jalnan"
                 android:text="강아지를"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/missingCom_tx2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/jalnan"
                 android:text="애타게 찾습니다!"
                 android:textAlignment="center"
                 android:textColor="@color/red"
                 android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/missingCom_tx" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
 
     <Button
-        android:id="@+id/hbdCom_save"
+        android:id="@+id/missingCom_save"
         android:layout_width="272dp"
         android:layout_height="38dp"
         android:layout_marginStart="22dp"
@@ -131,13 +224,19 @@
         android:layout_marginBottom="22dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/yellow_btn"
+        android:elevation="5dp"
+        android:fontFamily="@font/notosans_bold"
+        android:stateListAnimator="@null"
         android:text="저장"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/hbdCom_share"
+        android:id="@+id/missingCom_share"
+        android:elevation="5dp"
+        android:stateListAnimator="@null"
         android:layout_width="37dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"

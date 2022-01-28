@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/back_btn" />
 
     <TextView
-        android:id="@+id/hbdinfo_title"
+        android:id="@+id/missingInfo_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/hbdInfo_img"
+        android:id="@+id/missingInfo_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -39,13 +39,13 @@
         android:layout_marginBottom="539dp"
         android:text="대표 사진"
         android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/hbdInfo_btn"
+        app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/hbdInfo_name"
+        android:id="@+id/missingInfo_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -55,10 +55,10 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_img" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_img" />
 
     <TextView
-        android:id="@+id/hbdInfo_date"
+        android:id="@+id/missingInfo_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -69,10 +69,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_nameEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_nameEdit" />
 
     <TextView
-        android:id="@+id/hbdInfo_place"
+        android:id="@+id/missingInfo_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -83,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_dateEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_ageEdit" />
 
     <TextView
-        android:id="@+id/hbdInfo_preparation"
+        android:id="@+id/missingInfo_feat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -100,21 +100,21 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
-        android:id="@+id/hbdInfo_say"
+        android:id="@+id/missingInfo_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="275dp"
-        android:text="하고싶은 말"
+        android:layout_marginEnd="287dp"
+        android:text="실종 날짜"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_preparationEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_ftEdit" />
 
     <Button
-        android:id="@+id/hbdInfo_btn"
+        android:id="@+id/missingInfo_btn"
         android:layout_width="316dp"
         android:layout_height="38dp"
         android:layout_marginStart="22dp"
@@ -123,14 +123,18 @@
         android:layout_marginBottom="22dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@color/yellow_btn"
+        android:elevation="5dp"
+        android:fontFamily="@font/notosans_bold"
+        android:stateListAnimator="@null"
         android:text="완료"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/hbdInfo_imgEdit"
+        android:id="@+id/missingInfo_imgEdit"
         android:layout_width="108dp"
         android:layout_height="108dp"
         android:layout_marginStart="122dp"
@@ -138,14 +142,14 @@
         android:layout_marginEnd="130dp"
         android:layout_marginBottom="420dp"
         android:background="@color/add_img"
-        app:layout_constraintBottom_toTopOf="@+id/hbdInfo_btn"
+        app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_img" />
 
     <EditText
-        android:id="@+id/hbdInfo_nameEdit"
+        android:id="@+id/missingInfo_nameEdit"
         android:layout_width="316dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -157,11 +161,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_name"
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_name"
         tools:layout_height="0dp" />
 
     <EditText
-        android:id="@+id/hbdInfo_dateEdit"
+        android:id="@+id/missingInfo_ageEdit"
         android:layout_width="316dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -173,10 +177,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_date" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_age" />
 
     <EditText
-        android:id="@+id/hbdInfo_preparationEdit"
+        android:id="@+id/missingInfo_ftEdit"
         android:layout_width="316dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
@@ -189,23 +193,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_preparation" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_feat" />
 
     <EditText
-        android:id="@+id/hbdInfo_sayEdit"
+        android:id="@+id/missingInfo_dateEdit"
         android:layout_width="316dp"
         android:layout_height="0dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="21dp"
         android:backgroundTint="@color/input_text"
         android:ems="10"
-        android:hint="ex. 늦는 사람 똥침 100대"
         android:inputType="textPersonName"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_say" />
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_date" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -217,7 +220,7 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbdInfo_place">
+        app:layout_constraintTop_toBottomOf="@+id/missingInfo_gender">
 
         <RadioButton
             android:id="@+id/radioButton2"
