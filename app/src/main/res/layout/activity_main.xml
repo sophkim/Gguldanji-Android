@@ -65,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@+id/main_tx" />
 
         <Button
-            android:id="@+id/main_btn"
+            android:id="@+id/main_wedding_btn"
             android:layout_width="103dp"
             android:layout_height="103dp"
             android:layout_marginStart="71dp"
@@ -87,7 +87,7 @@
             tools:drawableTop="@drawable/wedding_btn" />
 
         <Button
-            android:id="@+id/main_btn3"
+            android:id="@+id/main_missing_btn"
             android:elevation="5dp"
             android:stateListAnimator="@null"
             android:layout_width="219dp"
@@ -103,11 +103,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_btn"
+            app:layout_constraintTop_toBottomOf="@+id/main_wedding_btn"
             tools:drawableTop="@drawable/missing_btn" />
 
         <Button
-            android:id="@+id/main_btn2"
+            android:id="@+id/main_hbd_btn"
             android:elevation="5dp"
             android:stateListAnimator="@null"
             android:layout_width="103dp"
