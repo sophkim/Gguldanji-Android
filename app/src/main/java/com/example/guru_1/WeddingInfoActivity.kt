@@ -15,6 +15,7 @@ import java.io.ByteArrayOutputStream
 
 class WeddingInfoActivity : AppCompatActivity() {
 
+    //변수 정의
     val Gallery = 0
     lateinit var imageButton: ImageButton
     lateinit var imageView: ImageView
@@ -24,10 +25,12 @@ class WeddingInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wedding_info)
 
+        //위젯과 변수 연결
         imageButton = findViewById(R.id.weddingInfo_imgEdit)
         imageView = findViewById(R.id.imageView)
         completeButton = findViewById(R.id.weddingInfo_btn)
 
+        //버튼 클릭 이벤트
         imageButton.setOnClickListener{loadImage()}  //이미지를 가져오는 함수 호출
 
         completeButton.setOnClickListener{
@@ -43,7 +46,7 @@ class WeddingInfoActivity : AppCompatActivity() {
                 resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
                 val byteArray: ByteArray = stream.toByteArray()
 
-                //인텐트
+                //인텐트 전달
                 var intent = Intent(this, WeddingCompleteActivity::class.java)
                 intent.putExtra("image", byteArray)
                 startActivity(intent)
@@ -62,7 +65,7 @@ class WeddingInfoActivity : AppCompatActivity() {
 
         if(requestCode == Gallery){
             if(resultCode == RESULT_OK){
-                imageButton.setBackgroundColor(Color.parseColor("#00B3B3B3"))
+                imageButton.setBackgroundColor(Color.parseColor("#00B3B3B3")) //이미지 선택되면 버튼 안보이게
 
                 var dataUri = data?.data
                 try{

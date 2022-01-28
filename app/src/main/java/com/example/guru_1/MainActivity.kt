@@ -7,6 +7,7 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
+    //변수 정의
     lateinit var wedding_btn: Button
     lateinit var hbd_btn: Button
     lateinit var missing_btn:Button
@@ -15,10 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //위젯과 변수 연결
         wedding_btn = findViewById(R.id.main_wedding_btn)
         hbd_btn = findViewById(R.id.main_hbd_btn)
         missing_btn = findViewById(R.id.main_missing_btn)
 
+        //버튼 클릭 이벤트
         wedding_btn.setOnClickListener{
             var intent = Intent(this, WeddingActivity::class.java)
             startActivity(intent)
