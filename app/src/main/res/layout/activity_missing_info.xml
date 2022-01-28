@@ -29,216 +29,233 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/missingInfo_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="287dp"
-        android:layout_marginBottom="539dp"
-        android:text="대표 사진"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/missingInfo_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="275dp"
-        android:text="실종자 이름"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_img" />
-
-    <TextView
-        android:id="@+id/missingInfo_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="275dp"
-        android:text="실종자 나이"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_nameEdit" />
-
-    <TextView
-        android:id="@+id/missingInfo_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="275dp"
-        android:text="실종자 성별"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_ageEdit" />
-
-    <TextView
-        android:id="@+id/missingInfo_feat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="260dp"
-        android:text="생김새 및 특징"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <TextView
-        android:id="@+id/missingInfo_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="287dp"
-        android:text="실종 날짜"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_ftEdit" />
-
-    <Button
-        android:id="@+id/missingInfo_btn"
-        android:layout_width="316dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="663dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="22dp"
-        android:background="@drawable/button_bg"
-        android:backgroundTint="@color/yellow_btn"
-        android:elevation="5dp"
-        android:fontFamily="@font/notosans_bold"
-        android:stateListAnimator="@null"
-        android:text="완료"
-        android:textSize="12sp"
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="683dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageButton
-        android:id="@+id/missingInfo_imgEdit"
-        android:layout_width="108dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="420dp"
-        android:background="@color/add_img"
-        app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_img" />
-
-    <EditText
-        android:id="@+id/missingInfo_nameEdit"
-        android:layout_width="316dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="21dp"
-        android:backgroundTint="@color/input_text"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_name"
-        tools:layout_height="0dp" />
-
-    <EditText
-        android:id="@+id/missingInfo_ageEdit"
-        android:layout_width="316dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="21dp"
-        android:backgroundTint="@color/input_text"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_age" />
-
-    <EditText
-        android:id="@+id/missingInfo_ftEdit"
-        android:layout_width="316dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="21dp"
-        android:backgroundTint="@color/input_text"
-        android:ems="10"
-        android:hint="ex. 갈색 머리"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_feat" />
-
-    <EditText
-        android:id="@+id/missingInfo_dateEdit"
-        android:layout_width="316dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="21dp"
-        android:backgroundTint="@color/input_text"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_date" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="248dp"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/missingInfo_gender">
-
-        <RadioButton
-            android:id="@+id/radioButton2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:text="여" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:text="남" />
-    </RadioGroup>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/missingInfo_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginEnd="287dp"
+                    android:layout_marginBottom="539dp"
+                    android:text="대표 사진"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/missingInfo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="161dp"
+                    android:layout_marginEnd="275dp"
+                    android:text="실종자 이름"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_img" />
 
+                <TextView
+                    android:id="@+id/missingInfo_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="275dp"
+                    android:text="실종자 나이"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_nameEdit" />
+
+                <TextView
+                    android:id="@+id/missingInfo_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="275dp"
+                    android:text="실종자 성별"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_ageEdit" />
+
+                <TextView
+                    android:id="@+id/missingInfo_feat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="260dp"
+                    android:text="생김새 및 특징"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+                <TextView
+                    android:id="@+id/missingInfo_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="287dp"
+                    android:text="실종 날짜"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.512"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_ftEdit" />
+
+                <Button
+                    android:id="@+id/missingInfo_btn"
+                    android:layout_width="316dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="663dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/yellow_btn"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:stateListAnimator="@null"
+                    android:text="완료"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/missingInfo_imgEdit"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:layout_marginStart="122dp"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginBottom="420dp"
+                    android:background="@color/add_img"
+                    app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add_img" />
+
+                <EditText
+                    android:id="@+id/missingInfo_nameEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_name"
+                    tools:layout_height="0dp" />
+
+                <EditText
+                    android:id="@+id/missingInfo_ageEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_age" />
+
+                <EditText
+                    android:id="@+id/missingInfo_ftEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:hint="ex. 갈색 머리"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_feat" />
+
+                <EditText
+                    android:id="@+id/missingInfo_dateEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_date" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="248dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_gender">
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="여" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="남" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
