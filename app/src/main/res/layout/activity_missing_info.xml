@@ -30,11 +30,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="683dp"
+        android:layout_width="412dp"
+        android:layout_height="689dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,29 +45,151 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="932dp">
+
+                <EditText
+                    android:id="@+id/missingInfo_numEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:hint="ex. 010-1234-5678"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_number" />
+
+                <EditText
+                    android:id="@+id/missingInfo_sayEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:hint="ex. 찾아주시는 분께는 사례드리겠습니다. "
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_say" />
+
+                <TextView
+                    android:id="@+id/missingInfo_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="287dp"
+                    android:text="보호자 연락처"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.931"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_placeEdit" />
+
+                <TextView
+                    android:id="@+id/missingInfo_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="287dp"
+                    android:text="실종 장소"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_dateEdit" />
+
+                <TextView
+                    android:id="@+id/missingInfo_say"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="287dp"
+                    android:text="하고싶은 말"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.658"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_numEdit" />
+
+                <TextView
+                    android:id="@+id/missingInfo_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="287dp"
+                    android:text="실종 날짜"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.512"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_ftEdit" />
+
+                <EditText
+                    android:id="@+id/missingInfo_placeEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:hint="ex. 꼼두레 도서관"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_place" />
+
+                <EditText
+                    android:id="@+id/missingInfo_dateEdit"
+                    android:layout_width="316dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="21dp"
+                    android:backgroundTint="@color/input_text"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textPersonName"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_date" />
 
                 <TextView
                     android:id="@+id/missingInfo_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="22dp"
-                    android:layout_marginTop="72dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginEnd="287dp"
                     android:layout_marginBottom="539dp"
                     android:text="대표 사진"
                     android:textSize="13sp"
                     app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.73"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.095" />
 
                 <TextView
                     android:id="@+id/missingInfo_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="22dp"
-                    android:layout_marginTop="161dp"
+                    android:layout_marginTop="180dp"
                     android:layout_marginEnd="275dp"
                     android:text="실종자 이름"
                     android:textSize="13sp"
@@ -115,53 +239,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-                <TextView
-                    android:id="@+id/missingInfo_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="287dp"
-                    android:text="실종 날짜"
-                    android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.512"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_ftEdit" />
-
-                <Button
-                    android:id="@+id/missingInfo_btn"
-                    android:layout_width="316dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginTop="663dp"
-                    android:layout_marginEnd="22dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="@drawable/button_bg"
-                    android:backgroundTint="@color/yellow_btn"
-                    android:elevation="5dp"
-                    android:fontFamily="@font/notosans_bold"
-                    android:stateListAnimator="@null"
-                    android:text="완료"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <ImageButton
                     android:id="@+id/missingInfo_imgEdit"
                     android:layout_width="108dp"
                     android:layout_height="108dp"
                     android:layout_marginStart="122dp"
-                    android:layout_marginTop="112dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="130dp"
                     android:layout_marginBottom="420dp"
                     android:background="@color/add_img"
                     app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.568"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_img"
+                    app:layout_constraintVertical_bias="0.045"
                     app:srcCompat="@drawable/add_img" />
 
                 <ImageView
@@ -169,13 +261,15 @@
                     android:layout_width="108dp"
                     android:layout_height="108dp"
                     android:layout_marginStart="122dp"
-                    android:layout_marginTop="112dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="130dp"
-                    android:layout_marginBottom="420dp"
+                    android:layout_marginBottom="436dp"
                     app:layout_constraintBottom_toTopOf="@+id/missingInfo_btn"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.568"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_img"
+                    app:layout_constraintVertical_bias="0.044"
                     tools:srcCompat="@tools:sample/avatars" />
 
                 <EditText
@@ -225,20 +319,22 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/missingInfo_feat" />
 
-                <EditText
-                    android:id="@+id/missingInfo_dateEdit"
+                <Button
+                    android:id="@+id/missingInfo_btn"
                     android:layout_width="316dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginEnd="21dp"
-                    android:backgroundTint="@color/input_text"
-                    android:ems="10"
-                    android:inputType="textPersonName"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="34dp"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/yellow_btn"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:stateListAnimator="@null"
+                    android:text="완료"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.365"
+                    app:layout_constraintHorizontal_bias="0.442"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_date" />
+                    app:layout_constraintTop_toBottomOf="@+id/missingInfo_sayEdit" />
 
                 <RadioGroup
                     android:id="@+id/radioGroup"
@@ -271,6 +367,7 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

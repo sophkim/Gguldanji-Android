@@ -15,23 +15,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         //위젯과 변수 연결
         wedding_btn = findViewById(R.id.main_wedding_btn)
         hbd_btn = findViewById(R.id.main_hbd_btn)
         missing_btn = findViewById(R.id.main_missing_btn)
 
-        //버튼 클릭 이벤트
+        //웨딩을 선택했을 때
         wedding_btn.setOnClickListener{
             var intent = Intent(this, WeddingActivity::class.java)
             startActivity(intent)
         }
-
+        //생일을 선택했을 때
         hbd_btn.setOnClickListener{
             var intent = Intent(this, HbdActivity::class.java)
             startActivity(intent)
         }
-
+        //실종을 선택했을 때
         missing_btn.setOnClickListener{
             var intent = Intent(this, MissingActivity::class.java)
             startActivity(intent)

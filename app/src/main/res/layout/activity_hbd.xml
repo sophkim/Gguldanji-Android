@@ -9,7 +9,7 @@
     tools:context=".HbdActivity">
 
     <FrameLayout
-        android:elevation="10dp"
+        android:id="@+id/frameLayout3"
         android:layout_width="316dp"
         android:layout_height="473dp"
         android:layout_marginStart="22dp"
@@ -17,6 +17,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="98dp"
         android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="생일 초대장"
-        android:textColor="@color/red"
+        android:textColor="@color/black"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

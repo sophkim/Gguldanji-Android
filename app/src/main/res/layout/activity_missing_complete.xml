@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:elevation="10dp"
+        android:id="@+id/frameLayout4"
         android:layout_width="316dp"
         android:layout_height="473dp"
         android:layout_marginStart="22dp"
@@ -38,6 +38,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="98dp"
         android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -117,11 +118,12 @@
                             <TextView
                                 android:id="@+id/missingCom_info"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="27dp"
                                 android:layout_marginStart="42dp"
-                                android:layout_marginTop="7dp"
+                                android:layout_marginTop="4dp"
                                 android:layout_marginEnd="42dp"
-                                android:text="진돗개 / 4세 / 남자 / 바둑이"
+                                android:gravity="center_horizontal"
+                                android:text="진돗개 / 4세 / 남자"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -130,35 +132,39 @@
 
                             <TextView
                                 android:id="@+id/missingCom_date"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="129dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
                                 android:layout_marginStart="103dp"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginEnd="103dp"
                                 android:layout_marginBottom="4dp"
+                                android:gravity="center_horizontal"
                                 android:text="1월 20일"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
                                 app:layout_constraintBottom_toTopOf="@+id/missingCom_place"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintHorizontal_bias="0.492"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/missingCom_info" />
 
                             <TextView
                                 android:id="@+id/missingCom_place"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center"
                                 android:layout_marginStart="56dp"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginEnd="56dp"
                                 android:layout_marginBottom="12dp"
-                                android:text="꿈두레 도서관에서 실종"
+                                android:gravity="center_horizontal"
+                                android:text="꿈두레"
                                 android:textColor="@color/white"
                                 android:textSize="16sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintHorizontal_bias="0.509"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/missingCom_date" />
                         </androidx.constraintlayout.widget.ConstraintLayout>

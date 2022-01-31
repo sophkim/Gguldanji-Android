@@ -9,50 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GURU_1">
-        <activity android:name=".HbdCompleteActivity">
-
-        </activity>
-
-        <activity android:name=".MissingCompleteActivity"></activity>
-
-        <activity android:name=".MissingInfoActivity">
-
-        </activity>
-
-        <activity android:name=".MissingActivity" >
-
-        </activity>
-
-        <activity android:name=".HbdInfoActivity" >
-
-        </activity>
-
-        <activity android:name=".HbdActivity" >
-
-        </activity>
-        <activity android:name=".WeddingCompleteActivity" >
-
-        </activity>
-
-        <activity android:name=".WeddingInfoActivity" >
-
-        </activity>
-
-        <activity android:name=".WeddingActivity" >
-
-        </activity>
-
-        <activity android:name=".SplashActivity">
-
-        </activity>
-
-        <activity android:name=".MainActivity" > //임시로 MainActivity부터 시작했어요!
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HbdCompleteActivity" />
+        <activity android:name=".MissingCompleteActivity" />
+        <activity android:name=".MissingInfoActivity" />
+        <activity android:name=".MissingActivity" />
+        <activity android:name=".HbdInfoActivity" />
+        <activity android:name=".HbdActivity" />
+        <activity android:name=".WeddingCompleteActivity" />
+        <activity android:name=".WeddingInfoActivity" />
+        <activity android:name=".WeddingActivity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

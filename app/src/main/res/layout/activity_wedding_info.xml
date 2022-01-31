@@ -190,6 +190,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
+        android:focusable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"

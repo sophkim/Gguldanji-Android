@@ -1,17 +1,18 @@
 package com.example.guru_1
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import java.io.ByteArrayOutputStream
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class HbdInfoActivity : AppCompatActivity() {
 
@@ -19,7 +20,22 @@ class HbdInfoActivity : AppCompatActivity() {
     val Gallery = 0
     lateinit var imageButton: ImageButton
     lateinit var imageView: ImageView
+    lateinit var nameEdit: EditText
+    lateinit var EditText: EditText
+    lateinit var placeEdit: EditText
+    lateinit var prepEdit: EditText
+    lateinit var sayEdit: EditText
     lateinit var completeButton: Button
+
+    //날짜 지정하기 위한 변수 설정(년, 월, 일)
+    var myCalendar: Calendar = Calendar.getInstance()
+    var myDatePicker =
+        DatePickerDialog.OnDateSetListener() { view, year, month, dayOfMonth ->
+            myCalendar.set(Calendar.YEAR, year)
+            myCalendar.set(Calendar.MONTH, month)
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateLabel()
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +44,17 @@ class HbdInfoActivity : AppCompatActivity() {
         //위젯과 변수 연결
         imageButton = findViewById(R.id.hbdInfo_imgEdit)
         imageView = findViewById(R.id.imageView)
+        EditText = findViewById(R.id.hbdInfo_dateEdit)
+        nameEdit = findViewById(R.id.hbdInfo_nameEdit)
+        placeEdit = findViewById(R.id.hbdInfo_placeEdit)
+        prepEdit = findViewById(R.id.hbdInfo_prepEdit)
+        sayEdit = findViewById(R.id.hbdInfo_sayEdit)
         completeButton = findViewById(R.id.hbdInfo_btn)
 
         //버튼 클릭 이벤트
-        imageButton.setOnClickListener{loadImage()}  //이미지를 가져오는 함수 호출
+        imageButton.setOnClickListener{loadImage()}  //사진 첨부
 
-        completeButton.setOnClickListener{
+        completeButton.setOnClickListener{ //완료 버튼
 
             try {
                 //이미지 리사이즈
@@ -49,13 +70,24 @@ class HbdInfoActivity : AppCompatActivity() {
                 //인텐트 전달
                 var intent = Intent(this, HbdCompleteActivity::class.java)
                 intent.putExtra("image", byteArray)
+                intent.putExtra("name", nameEdit.text.toString())
+                intent.putExtra("date", EditText.text.toString())
+                intent.putExtra("place", placeEdit.text.toString())
+                intent.putExtra("prep", prepEdit.text.toString())
+                intent.putExtra("say", sayEdit.text.toString())
+
                 startActivity(intent)
             }
             catch (e: Exception){
-                Toast.makeText(this,"이미지를 선택하세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "이미지를 선택하세요.", Toast.LENGTH_SHORT).show()
             }
 
         }
+        EditText.setOnClickListener{ //날짜 버튼 클릭시, DatePicker를 통한 날짜 지정
+            DatePickerDialog(this, myDatePicker, myCalendar.get(Calendar.YEAR),
+            myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
     }
 
     //불러온 이미지를 imageView에 보여줌
@@ -69,10 +101,13 @@ class HbdInfoActivity : AppCompatActivity() {
 
                 var dataUri = data?.data
                 try{
-                    var bitmap : Bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver,dataUri)
+                    var bitmap : Bitmap = MediaStore.Images.Media.getBitmap(
+                        this.contentResolver,
+                        dataUri
+                    )
                     imageView.setImageBitmap(bitmap)
-                }catch (e:Exception){
-                    Toast.makeText(this,"$e",Toast.LENGTH_SHORT).show()
+                }catch (e: Exception){
+                    Toast.makeText(this, "$e", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -84,7 +119,15 @@ class HbdInfoActivity : AppCompatActivity() {
         intent.type = "image/*"
         intent.action = Intent.ACTION_GET_CONTENT
 
-        startActivityForResult(Intent.createChooser(intent,"Load Picture"), Gallery)
+        startActivityForResult(Intent.createChooser(intent, "Load Picture"), Gallery)
+    }
+
+    private fun updateLabel() { //현재 날짜로 초기 설정함
+        val myFormat = "yyyy/MM/dd"  //  예시: 2022/03/09
+        val sdf = SimpleDateFormat(myFormat, Locale.KOREA)
+        EditText = findViewById(R.id.hbdInfo_dateEdit)
+        EditText.setText(sdf.format(myCalendar.getTime()))
+
     }
 
 
