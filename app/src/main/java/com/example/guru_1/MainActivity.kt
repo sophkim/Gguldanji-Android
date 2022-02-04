@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var wedding_btn: Button
     lateinit var hbd_btn: Button
     lateinit var missing_btn:Button
+    lateinit var design_btn:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         wedding_btn = findViewById(R.id.main_wedding_btn)
         hbd_btn = findViewById(R.id.main_hbd_btn)
         missing_btn = findViewById(R.id.main_missing_btn)
+        design_btn = findViewById(R.id.main_my_btn)
 
         //웨딩을 선택했을 때
         wedding_btn.setOnClickListener{
@@ -33,6 +35,12 @@ class MainActivity : AppCompatActivity() {
         //실종을 선택했을 때
         missing_btn.setOnClickListener{
             var intent = Intent(this, MissingActivity::class.java)
+            startActivity(intent)
+        }
+
+        //마이디자인을 선택했을 때
+        design_btn.setOnClickListener{
+            var intent = Intent(this, MyDesignActivity::class.java)
             startActivity(intent)
         }
 
