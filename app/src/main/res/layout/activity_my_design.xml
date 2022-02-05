@@ -8,55 +8,24 @@
     android:visibility="visible"
     tools:context=".MyDesignActivity">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="바둑이 실종 전단지"
-        android:textColor="@color/font"
-        android:textSize="14sp"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="416dp"
+        android:layout_height="67dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout8" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <FrameLayout
-        android:id="@+id/frameLayout8"
-        android:layout_width="158dp"
-        android:layout_height="245dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="24dp"
-        android:background="#FFFFFF"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myDesign_title">
-
-
-        <ImageView
-            android:id="@+id/wedding_img6"
-            android:layout_width="158dp"
-            android:layout_height="245dp"
-            android:elevation="10dp"
-            android:stateListAnimator="@null"
-            app:srcCompat="@drawable/merry_complete" />
-    </FrameLayout>
-
-    <ImageButton
-        android:id="@+id/myDesign_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="19dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_btn" />
+        <ImageButton
+            android:id="@+id/myDesign_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="19dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/back_btn" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/myDesign_title"
@@ -69,95 +38,112 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout7"
-        android:layout_width="158dp"
-        android:layout_height="245dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="22dp"
-        android:background="#FFFFFF"
-        android:elevation="10dp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout8"
-        app:layout_constraintTop_toBottomOf="@+id/myDesign_title">
-
-
-        <ImageView
-            android:id="@+id/wedding_img5"
-            android:layout_width="158dp"
-            android:layout_height="245dp"
-            android:elevation="10dp"
-            android:stateListAnimator="@null"
-            app:srcCompat="@drawable/group15" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout8"
-        android:layout_width="158dp"
-        android:layout_height="245dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="24dp"
-        android:background="#FFFFFF"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
-        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout7">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="827dp">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout6"
+                    android:layout_width="158dp"
+                    android:layout_height="245dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFFFFF"
+                    android:elevation="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
 
-        <ImageView
-            android:id="@+id/missing_img2"
-            android:layout_width="158dp"
-            android:layout_height="245dp"
-            android:elevation="10dp"
-            android:stateListAnimator="@null"
-            app:srcCompat="@drawable/missingmerry_complete" />
-    </FrameLayout>
+                    <ImageView
+                        android:id="@+id/wedding_img6"
+                        android:layout_width="158dp"
+                        android:layout_height="245dp"
+                        android:elevation="10dp"
+                        android:stateListAnimator="@null"
+                        app:srcCompat="@drawable/merry_complete" />
+                </FrameLayout>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="연수 웅 청첩장"
-        android:textColor="@color/font"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout7" />
+                <FrameLayout
+                    android:id="@+id/frameLayout7"
+                    android:layout_width="158dp"
+                    android:layout_height="245dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#FFFFFF"
+                    android:elevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="5dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="지니네 생일 초대장"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout7" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="5dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="지니네 생일 초대장"
-        android:textColor="@color/font"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout7" />
+                    <ImageView
+                        android:id="@+id/wedding_img7"
+                        android:layout_width="158dp"
+                        android:layout_height="245dp"
+                        android:elevation="10dp"
+                        android:stateListAnimator="@null"
+                        app:srcCompat="@drawable/merry_complete" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout8"
+                    android:layout_width="158dp"
+                    android:layout_height="245dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="287dp"
+                    android:background="#FFFFFF"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/missing_img8"
+                        android:layout_width="158dp"
+                        android:layout_height="245dp"
+                        android:elevation="10dp"
+                        android:stateListAnimator="@null"
+                        app:srcCompat="@drawable/missingmerry_complete" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout9"
+                    android:layout_width="158dp"
+                    android:layout_height="245dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="287dp"
+                    android:background="#FFFFFF"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/missing_img9"
+                        android:layout_width="158dp"
+                        android:layout_height="245dp"
+                        android:elevation="10dp"
+                        android:stateListAnimator="@null"
+                        app:srcCompat="@drawable/missingmerry_complete" />
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
