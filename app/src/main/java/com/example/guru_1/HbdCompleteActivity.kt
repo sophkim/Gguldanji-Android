@@ -11,10 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import org.w3c.dom.Text
 import java.io.ByteArrayOutputStream
@@ -36,6 +33,8 @@ class HbdCompleteActivity : AppCompatActivity() {
     lateinit var imageLayout: ConstraintLayout
     lateinit var shareButton: Button
     lateinit var imageBitmap: Bitmap
+    lateinit var back: ImageButton
+    lateinit var home: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +51,8 @@ class HbdCompleteActivity : AppCompatActivity() {
         saveButton = findViewById(R.id.hbdCom_save)
         imageLayout = findViewById(R.id.imageLayout)
         shareButton = findViewById(R.id.hbdCom_share)
+        back = findViewById(R.id.hbdCom_back)
+        home = findViewById(R.id.hbdCom_home)
 
         //인텐트 받기
         val byteArray = intent.getByteArrayExtra("image")
@@ -98,6 +99,17 @@ class HbdCompleteActivity : AppCompatActivity() {
             startActivity(chooser)
         }
 
+        //메인버튼 클릭 이벤트
+        home.setOnClickListener {
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        //뒤로가기 버튼 클릭 이벤트
+        back.setOnClickListener {
+            var intent = Intent(this,HbdInfoActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     //뷰 to 이미지 변환

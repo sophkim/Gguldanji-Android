@@ -28,6 +28,9 @@ class MissingInfoActivity : AppCompatActivity() {
     lateinit var numberEdit: EditText
     lateinit var sayEdit: EditText
     lateinit var completeButton: Button
+    lateinit var back: ImageButton
+    lateinit var home: ImageButton
+
 
 
     //날짜 지정하기 위한 변수 설정(년, 월, 일)
@@ -56,6 +59,8 @@ class MissingInfoActivity : AppCompatActivity() {
         numberEdit = findViewById(R.id.missingInfo_numEdit)
         sayEdit = findViewById(R.id.missingInfo_sayEdit)
         completeButton = findViewById(R.id.missingInfo_btn)
+        back = findViewById(R.id.missingInfo_back)
+        home = findViewById(R.id.missingInfo_home)
 
         //라디오 그룹 전처리
         var genderText = ""
@@ -64,6 +69,18 @@ class MissingInfoActivity : AppCompatActivity() {
                 R.id.radioButton2 -> genderText = "암컷"
                 R.id.radioButton -> genderText = "수컷"
             }
+        }
+
+        //메인버튼 클릭 이벤트
+        home.setOnClickListener {
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        //뒤로가기 버튼 클릭 이벤트
+        back.setOnClickListener {
+            var intent = Intent(this,MissingActivity::class.java)
+            startActivity(intent)
         }
 
         //버튼 클릭 이벤트

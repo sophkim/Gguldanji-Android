@@ -26,6 +26,8 @@ class HbdInfoActivity : AppCompatActivity() {
     lateinit var prepEdit: EditText
     lateinit var sayEdit: EditText
     lateinit var completeButton: Button
+    lateinit var back:ImageButton
+    lateinit var home:ImageButton
 
     //날짜 지정하기 위한 변수 설정(년, 월, 일)
     var myCalendar: Calendar = Calendar.getInstance()
@@ -50,6 +52,8 @@ class HbdInfoActivity : AppCompatActivity() {
         prepEdit = findViewById(R.id.hbdInfo_prepEdit)
         sayEdit = findViewById(R.id.hbdInfo_sayEdit)
         completeButton = findViewById(R.id.hbdInfo_btn)
+        back = findViewById(R.id.hbdInfo_back)
+        home = findViewById(R.id.hbdInfo_home)
 
         //버튼 클릭 이벤트
         imageButton.setOnClickListener{loadImage()}  //사진 첨부
@@ -86,6 +90,18 @@ class HbdInfoActivity : AppCompatActivity() {
         EditText.setOnClickListener{ //날짜 버튼 클릭시, DatePicker를 통한 날짜 지정
             DatePickerDialog(this, myDatePicker, myCalendar.get(Calendar.YEAR),
             myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
+        //뒤로가기 버튼 클릭 이벤트
+        back.setOnClickListener {
+            var intent = Intent(this,HbdActivity::class.java)
+            startActivity(intent)
+        }
+
+        //메인버튼 클릭 이벤트
+        home.setOnClickListener {
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
 
     }

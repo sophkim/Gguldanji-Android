@@ -8,6 +8,17 @@
     android:orientation="vertical"
     tools:context=".HbdActivity">
 
+    <ImageButton
+        android:id="@+id/wedding_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="13dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_btn" />
+
     <FrameLayout
         android:elevation="10dp"
         android:layout_width="316dp"
@@ -43,7 +54,7 @@
     </FrameLayout>
 
     <ImageButton
-        android:id="@+id/hbd_back"
+        android:id="@+id/wedding_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"

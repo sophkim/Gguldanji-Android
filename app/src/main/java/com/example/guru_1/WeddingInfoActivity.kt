@@ -24,6 +24,8 @@ class WeddingInfoActivity : AppCompatActivity() {
     lateinit var brideName: EditText
     lateinit var groomName: EditText
     lateinit var placeEdit: EditText
+    lateinit var back:ImageButton
+    lateinit var home:ImageButton
 
 
     var myCalendar: Calendar = Calendar.getInstance()
@@ -47,6 +49,20 @@ class WeddingInfoActivity : AppCompatActivity() {
         brideName = findViewById(R.id.weddingInfo_femaleEdit)
         groomName = findViewById(R.id.weddingInfo_maleEdit)
         placeEdit = findViewById(R.id.weddingInfo_placeEdit)
+        back = findViewById(R.id.weddingInfo_back)
+        home = findViewById(R.id.weddingInfo_home)
+
+        //메인버튼 클릭 이벤트
+        home.setOnClickListener {
+            var intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        //뒤로가기 버튼 클릭 이벤트
+        back.setOnClickListener {
+            var intent = Intent(this,WeddingActivity::class.java)
+            startActivity(intent)
+        }
 
         //버튼 클릭 이벤트
         imageButton.setOnClickListener{loadImage()}  //이미지를 가져오는 함수 호출
