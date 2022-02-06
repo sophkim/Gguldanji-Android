@@ -1,5 +1,7 @@
 package com.example.guru_1
 
+import DatabaseHelper
+import Memo
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
@@ -10,16 +12,17 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
-import org.w3c.dom.Text
+import androidx.recyclerview.widget.RecyclerView
 import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
 
 class HbdCompleteActivity : AppCompatActivity() {
+    val helper = DatabaseHelper(this, "memo", 3)
 
     //변수 정의
     lateinit var hbdImage: ImageView
@@ -30,7 +33,7 @@ class HbdCompleteActivity : AppCompatActivity() {
     lateinit var prepView: TextView
     lateinit var sayView: TextView
     lateinit var saveButton: Button
-    lateinit var imageLayout: ConstraintLayout
+    lateinit var imageLayout: FrameLayout
     lateinit var shareButton: Button
     lateinit var imageBitmap: Bitmap
     lateinit var back: ImageButton
@@ -80,9 +83,18 @@ class HbdCompleteActivity : AppCompatActivity() {
         prepView.text = prepin
         sayView.text = sayin
 
+        //마이디자인에 이미지 저장
+        imageLayout?.post {
+            val imgbitmap = viewToBitmap(imageLayout)//뷰를 비트맵으로
+            val imgbyteArray = bitmapToByteArray(imgbitmap)//비트맵을 바이트어레이로
+            val memo = Memo(null, imgbyteArray)//biteArray를 DB에 저장
+            helper.insertData(memo)
+            Toast.makeText(baseContext, "마이디자인에 저장되었습니다.", Toast.LENGTH_SHORT).show()
+        }
+
         //이미지 저장버튼 누를 때
         saveButton.setOnClickListener {
-            imageBitmap = viewToBitmap(imageLayout) //뷰를 이미지로
+            imageBitmap = viewToBitmap(imageLayout) //뷰를 비트맵으로
             saveImage(imageBitmap) //이미지를 저장
             Toast.makeText(baseContext, "이미지 저장이 완료되었습니다.", Toast.LENGTH_SHORT).show()
         }
@@ -112,9 +124,10 @@ class HbdCompleteActivity : AppCompatActivity() {
         }
     }
 
+
     //뷰 to 이미지 변환
     fun viewToBitmap(view: View): Bitmap {
-        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
+        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)//
         val canvas = Canvas(bitmap)
         view.draw(canvas)
         return bitmap
@@ -163,7 +176,7 @@ class HbdCompleteActivity : AppCompatActivity() {
         }
     }
     //이미지 to URI
-    private fun getImageUri(context: Context, inImage: Bitmap): Uri? {
+    public fun getImageUri(context: Context, inImage: Bitmap): Uri? {
         val bytes = ByteArrayOutputStream()
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
         val path: String = MediaStore.Images.Media.insertImage(
@@ -173,6 +186,15 @@ class HbdCompleteActivity : AppCompatActivity() {
                 null
         )
         return Uri.parse(path)
+    }
+
+    //비트맵 to 바이트어레이
+    public fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
+        val stream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+        val byteArray = stream.toByteArray()
+
+        return byteArray
     }
 
 }

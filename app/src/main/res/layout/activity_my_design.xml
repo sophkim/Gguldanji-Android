@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -47,14 +48,11 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-
                     <ImageView
-                        android:id="@+id/wedding_img6"
-                        android:layout_width="158dp"
-                        android:layout_height="245dp"
-                        android:elevation="10dp"
-                        android:stateListAnimator="@null"
-                        app:srcCompat="@drawable/merry_complete" />
+                        android:id="@+id/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:srcCompat="@tools:sample/avatars" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -68,14 +66,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-
                     <ImageView
-                        android:id="@+id/wedding_img5"
-                        android:layout_width="158dp"
-                        android:layout_height="245dp"
-                        android:elevation="10dp"
-                        android:stateListAnimator="@null"
-                        app:srcCompat="@drawable/group15" />
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:srcCompat="@tools:sample/avatars" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -90,16 +85,13 @@
                     app:layout_constraintEnd_toStartOf="@+id/frameLayout7"
                     app:layout_constraintHorizontal_bias="0.078"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/frameLayout7">
-
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout7" >
 
                     <ImageView
-                        android:id="@+id/missing_img2"
-                        android:layout_width="158dp"
-                        android:layout_height="245dp"
-                        android:elevation="10dp"
-                        android:stateListAnimator="@null"
-                        app:srcCompat="@drawable/missingmerry_complete" />
+                        android:id="@+id/image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:srcCompat="@tools:sample/avatars" />
                 </FrameLayout>
 
 
@@ -128,9 +120,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

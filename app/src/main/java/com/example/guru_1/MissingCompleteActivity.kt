@@ -1,5 +1,7 @@
 package com.example.guru_1
 
+import DatabaseHelper
+import Memo
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
@@ -19,6 +21,7 @@ import java.io.FileOutputStream
 import java.io.IOException
 
 class MissingCompleteActivity : AppCompatActivity() {
+    val helper = DatabaseHelper(this, "memo", 3)
 
     //변수 정의
     lateinit var missingImage: ImageView
@@ -92,6 +95,16 @@ class MissingCompleteActivity : AppCompatActivity() {
         missingFeat.text = featin
         missingPhone.text = numin
         missingSay.text = sayin
+
+        //마이디자인에 이미지 저장
+        imageLayout?.post {
+            val imgbitmap = viewToBitmap(imageLayout)//뷰를 비트맵으로
+            val imgbyteArray = bitmapToByteArray(imgbitmap)//비트맵을 바이트어레이로
+            val memo = Memo(null, imgbyteArray)//biteArray를 DB에 저장
+            helper.insertData(memo)
+            Toast.makeText(baseContext, "마이디자인에 저장되었습니다.", Toast.LENGTH_SHORT).show()
+        }
+
 
         //이미지 저장 버튼 누를 때
         saveButton.setOnClickListener {
@@ -178,5 +191,13 @@ class MissingCompleteActivity : AppCompatActivity() {
         return Uri.parse(path)
     }
 
+    //비트맵 to 바이트어레이
+    public fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
+        val stream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+        val byteArray = stream.toByteArray()
+
+        return byteArray
+    }
 
 }
