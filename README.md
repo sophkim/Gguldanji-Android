@@ -1,2 +1,2 @@
 # Gguldanji
-A mobile app that creates professional design flyers with just text input.
+Guldangi is a mobile application that creates professional design flyers with simple text input.
